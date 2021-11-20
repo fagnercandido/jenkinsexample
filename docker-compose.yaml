@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  product-service:
+    image: fagner7777777/product-service:latest
+    container_name: product-service
+    build:
+      context: ./product-service
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+    expose:
+      - 8081
+    ports:
+      - 8081:8081
